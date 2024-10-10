@@ -1,1 +1,1 @@
-FORMATS_FOR_IMAGE = [".jpg", ".jpeg"]
+FORMATS_FOR_IMAGE = [".jpg", ".jpeg", ".bmp"]

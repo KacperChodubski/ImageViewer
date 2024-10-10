@@ -30,6 +30,10 @@ class Main:
         # MainWindow(window=window).load()
         sobel_filter = SobelFilter()
         gaussian_filter = GaussianFilter()
+        change_brightness = ChangeBrightness()
+        negative_f = Negative()
+        powering = Powering()
+        equal_hist = EqualHistogram()
         self.histogram = Histogram()
         self.image_component = ImageComponent(window=self.window)
         self.processed_image = ImageComponent(window=self.window)
@@ -44,6 +48,10 @@ class Main:
                 SelectItem("Default", lambda: self.select_filter(None)),
                 SelectItem(sobel_filter.name, lambda: self.select_filter(sobel_filter.process)),
                 SelectItem(gaussian_filter.name, lambda: self.select_filter(gaussian_filter.process)),
+                SelectItem(change_brightness.name, lambda: self.select_filter(change_brightness.process)),
+                SelectItem(negative_f.name, lambda: self.select_filter(negative_f.process)),
+                SelectItem(powering.name, lambda: self.select_filter(powering.process)),
+                SelectItem(equal_hist.name, lambda: self.select_filter(equal_hist.process)),
         ]
         self.file_selector.addCallback(self.reload_images)
         self.file_selector.addCallback(self.reload_images)

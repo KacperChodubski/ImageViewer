@@ -20,7 +20,7 @@ class FileSelector:
         if filename:
             self.file_path = filename
             self.image = Image.open(filename)
-            size = (400, 400)
+            size = (350, 350)
             self.image.thumbnail(size, Image.Resampling.LANCZOS)
         else:
             print("No file was selected.")
